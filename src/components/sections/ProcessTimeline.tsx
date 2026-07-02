@@ -6,26 +6,26 @@ const steps = [
   {
     icon: Search,
     step: '01',
-    title: 'Discovery',
-    description: 'We dive deep into understanding your business, goals, and target audience to create a tailored strategy.',
+    title: 'Map the System',
+    description: 'We clarify the business goal, audience, current tools, risks, and growth channels before prescribing a solution.',
   },
   {
     icon: Lightbulb,
     step: '02',
-    title: 'Strategy & Design',
-    description: 'Our team crafts a comprehensive blueprint and stunning designs that align with your vision.',
+    title: 'Connect the Plan',
+    description: 'We shape the right mix of AI, security, web, content, and marketing so every discipline supports the same outcome.',
   },
   {
     icon: Code,
     step: '03',
-    title: 'Development',
-    description: 'We build your solution using cutting-edge technologies, ensuring scalability and performance.',
+    title: 'Build & Harden',
+    description: 'We design, write, integrate, test, and secure the experience with performance and maintainability built in.',
   },
   {
     icon: Rocket,
     step: '04',
-    title: 'Launch & Grow',
-    description: 'We launch your project and provide ongoing support to help you achieve continuous growth.',
+    title: 'Launch & Compound',
+    description: 'We launch, measure, optimize, and keep improving so the system grows stronger after release.',
   },
 ];
 
@@ -52,7 +52,7 @@ export function ProcessTimeline() {
             How We <span className="gradient-text">Work</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A proven methodology that delivers results, from initial concept to successful launch.
+            A connected delivery model that takes an idea from first signal to launch, learning, and sustained growth.
           </p>
         </div>
 

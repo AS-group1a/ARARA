@@ -11,7 +11,7 @@ type Props = {
 
 export function PageLayout({ locale, t, children }: Props) {
   const brand = {
-    name: "The Framework",
+    name: "ARARA",
     logoSrc: "/logo.png",
     logoAltKey: "header.brand.logoAlt",
     homeHref: "/",

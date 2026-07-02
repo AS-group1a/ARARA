@@ -8,15 +8,16 @@ export default defineConfig(({ command, mode }) => ({
   /**
    * GitHub Pages Project Site Base
    * DEV  → "/"
-   * BUILD → "/TheFramework/"
+   * BUILD → "/ARARA/"
    *
    * This MUST be hardcoded for GitHub Pages project deployments.
    */
-  base: command === "build" ? "/TheFramework/" : "/",
+  base: command === "build" ? "/ARARA/" : "/",
 
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["toner-scales-provisions-wolf.trycloudflare.com"],
     hmr: {
       overlay: false,
     },

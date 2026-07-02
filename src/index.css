@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* AchiDigital Brand Colors - Light Mode */
+    /* ARARA Brand Colors - Light Mode */
     --background: 220 20% 97%;
     --foreground: 220 25% 10%;
     
@@ -35,7 +35,7 @@
     
     --radius: 0.75rem;
     
-    /* AchiDigital Custom Tokens */
+    /* ARARA Custom Tokens */
     --glow-primary: 220 70% 55%;
     --glow-accent: 200 80% 60%;
     --glass-bg: 220 20% 98% / 0.7;
@@ -56,7 +56,7 @@
   }
 
   .dark {
-    /* AchiDigital Brand Colors - Dark Mode (Default) */
+    /* ARARA Brand Colors - Dark Mode (Default) */
     --background: 220 25% 6%;
     --foreground: 220 10% 95%;
     

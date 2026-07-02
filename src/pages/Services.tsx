@@ -6,30 +6,21 @@ import { cn } from "@/lib/utils"
 import { NavLink } from "@/components/NavLink"
 import { useScrollReveal } from "@/hooks/useScrollReveal"
 import {
-  Code2,
-  Gauge,
-  Palette,
-  Search,
-  Globe2,
-  MessageCircle,
+  Bot,
+  ShieldCheck,
+  MonitorSmartphone,
   Megaphone,
-  PenSquare,
-  ShoppingBag,
-  Workflow,
+  PenTool,
+  Layers3,
 } from "lucide-react"
 
 type ServiceKey =
-  | "aiWebsiteDev"
-  | "fullStackDev"
-  | "performanceOptimization"
-  | "uxui"
-  | "seo"
-  | "geoLLM"
-  | "aeo"
-  | "ppc"
-  | "contentWriting"
-  | "ecommerce"
-  | "aiAutomation"
+  | "aiSolutions"
+  | "cybersecurity"
+  | "web"
+  | "contentCreation"
+  | "marketingGrowth"
+  | "fullSolutions"
 
 type ServiceItem = {
   key: ServiceKey
@@ -40,54 +31,34 @@ type ServiceItem = {
 
 const SERVICES: ServiceItem[] = [
   {
-    key: "fullStackDev",
-    to: "/services/full-stack-web-app-development",
-    icon: Code2,
+    key: "aiSolutions",
+    to: "/services/ai-solutions",
+    icon: Bot,
   },
   {
-    key: "performanceOptimization",
-    to: "/services/website-optimization-performance",
-    icon: Gauge,
+    key: "cybersecurity",
+    to: "/services/cybersecurity",
+    icon: ShieldCheck,
   },
   {
-    key: "uxui",
-    to: "/services/ux-ui-design-user-experience",
-    icon: Palette,
+    key: "web",
+    to: "/services/web",
+    icon: MonitorSmartphone,
   },
   {
-    key: "seo",
-    to: "/services/seo",
-    icon: Search,
+    key: "contentCreation",
+    to: "/services/content-creation",
+    icon: PenTool,
   },
   {
-    key: "geoLLM",
-    to: "/services/geo-llm-search-optimization",
-    icon: Globe2,
-  },
-  {
-    key: "aeo",
-    to: "/services/answer-engine-optimization",
-    icon: MessageCircle,
-  },
-  {
-    key: "ppc",
-    to: "/services/paid-advertising-ppc",
+    key: "marketingGrowth",
+    to: "/services/marketing-growth",
     icon: Megaphone,
   },
   {
-    key: "contentWriting",
-    to: "/services/content-professional-writing",
-    icon: PenSquare,
-  },
-  {
-    key: "ecommerce",
-    to: "/services/ecommerce-solutions",
-    icon: ShoppingBag,
-  },
-  {
-    key: "aiAutomation",
-    to: "/services/ai-integrations-automation",
-    icon: Workflow,
+    key: "fullSolutions",
+    to: "/services/full-solutions",
+    icon: Layers3,
   },
 ]
 
@@ -193,7 +164,7 @@ export default function Services({ locale, t }: ServicesPageProps) {
               return (
                 <li key={service.key}>
                   <NavLink
-                    // IMPORTANT: use "to" (router path) so basename (/TheFramework/) is always respected
+                    // IMPORTANT: use "to" (router path) so basename (/ARARA/) is always respected
                     to={service.to}
                     aria-label={aria}
                     className={cn(

@@ -2,6 +2,7 @@
 import type { Locale } from "@/i18n"
 
 export const SUPPORTED_PREFIXES = ["fr", "lb"] as const
+type SupportedPrefix = (typeof SUPPORTED_PREFIXES)[number]
 
 const trimSlashes = (s: string) => (s || "").replace(/^\/+|\/+$/g, "")
 
@@ -34,7 +35,7 @@ export function stripLocalePrefix(pathname: string): string {
   const segs = clean.split("/").filter(Boolean)
   const first = segs[0]?.toLowerCase()
 
-  if (first && SUPPORTED_PREFIXES.includes(first as any)) {
+  if (first && SUPPORTED_PREFIXES.includes(first as SupportedPrefix)) {
     const rest = "/" + segs.slice(1).join("/")
     return rest === "/" ? "/" : rest
   }
