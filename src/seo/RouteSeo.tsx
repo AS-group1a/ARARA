@@ -145,7 +145,7 @@ function buildSchemaGraph(args: {
   const orgId = `${SITE_ORIGIN}/#organization`
   const websiteId = `${SITE_ORIGIN}/#website`
 
-  const siteName = safeT(t, DEFAULT_SEO_KEYS.siteNameKey) || "Framework"
+  const siteName = safeT(t, DEFAULT_SEO_KEYS.siteNameKey) || "ARARA"
 
   const graph: SchemaNode[] = [
     {
@@ -238,7 +238,7 @@ export default function RouteSeo({ title, description, ogImage, indexable, canon
   const htmlLang = htmlLangFor(locale)
   const htmlDir = locale === "lb" ? "rtl" : "ltr"
 
-  const siteName = safeT(t, DEFAULT_SEO_KEYS.siteNameKey) || "Framework"
+  const siteName = safeT(t, DEFAULT_SEO_KEYS.siteNameKey) || "ARARA"
 
   const schemaGraph = buildSchemaGraph({
     t,

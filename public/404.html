@@ -9,13 +9,13 @@
         var l = window.location;
 
         // GitHub Pages repo base (project site)
-        var base = "/TheFramework/";
+        var base = "/ARARA/";
 
         // Prevent loops if we already redirected
         if (l.search && l.search.indexOf("?p=") === 0) return;
 
-        // Normalize if GitHub serves "/TheFramework" without trailing slash
-        if (l.pathname === "/TheFramework") {
+        // Normalize if GitHub serves "/ARARA" without trailing slash
+        if (l.pathname === "/ARARA") {
           l.replace(base);
           return;
         }

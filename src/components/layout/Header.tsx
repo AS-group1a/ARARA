@@ -56,15 +56,12 @@ export function Header({
   locale,
   brand,
 servicesDropdown = [
-  { href: "/services/full-stack", labelKey: "header.services.fullStack" },
-  { href: "/services/performance", labelKey: "header.services.performance" },
-  { href: "/services/ux-ui", labelKey: "header.services.uxui" },
-  { href: "/services/seo", labelKey: "header.services.seo" },
-  { href: "/services/geo-llm", labelKey: "header.services.geo" },
-  { href: "/services/aeo", labelKey: "header.services.aeo" },
-  { href: "/services/content", labelKey: "header.services.content" },
-  { href: "/services/ecommerce", labelKey: "header.services.ecommerce" },
-  { href: "/services/ai-automation", labelKey: "header.services.aiAutomation" }
+  { href: "/services/ai-solutions", labelKey: "header.services.aiSolutions" },
+  { href: "/services/cybersecurity", labelKey: "header.services.cybersecurity" },
+  { href: "/services/web", labelKey: "header.services.web" },
+  { href: "/services/content-creation", labelKey: "header.services.contentCreation" },
+  { href: "/services/marketing-growth", labelKey: "header.services.marketingGrowth" },
+  { href: "/services/full-solutions", labelKey: "header.services.fullSolutions" }
 ],
 
 }: HeaderProps) {

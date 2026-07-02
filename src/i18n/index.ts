@@ -4,7 +4,7 @@ import fr from "./locales/fr.json"
 import ar from "./locales/ar.json"
 
 export type Locale = "en" | "fr" | "lb"
-type Dict = Record<string, any>
+type Dict = Record<string, unknown>
 
 const dictionaries: Record<Locale, Dict> = {
   en,
@@ -12,8 +12,11 @@ const dictionaries: Record<Locale, Dict> = {
   lb: ar,
 }
 
-function get(obj: any, path: string) {
-  return path.split(".").reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj)
+function get(obj: Dict, path: string) {
+  return path.split(".").reduce<unknown>((acc, key) => {
+    if (!acc || typeof acc !== "object") return undefined
+    return (acc as Dict)[key]
+  }, obj)
 }
 
 export function createTranslator(locale: Locale) {
@@ -22,6 +25,8 @@ export function createTranslator(locale: Locale) {
   return function t(keyPath: string) {
     const value = get(dict, keyPath)
     if (typeof value === "string") return value
+    const fallback = get(dictionaries.en, keyPath)
+    if (typeof fallback === "string") return fallback
     return keyPath
   }
 }

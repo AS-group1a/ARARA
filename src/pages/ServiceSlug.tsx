@@ -85,31 +85,37 @@ function removeJsonLd(id: string) {
 }
 
 const SERVICE_SLUG_TO_KEY = {
-  "full-stack": "fullStack",
-  performance: "performance",
-  "ux-ui": "uxui",
-  seo: "seo",
-  "geo-llm": "geo",
-  aeo: "aeo",
-  ppc: "ppc",
-  content: "content",
-  ecommerce: "ecommerce",
-  "ai-automation": "aiAutomation",
+  "ai-solutions": "aiSolutions",
+  cybersecurity: "cybersecurity",
+  web: "web",
+  "content-creation": "contentCreation",
+  "marketing-growth": "marketingGrowth",
+  "full-solutions": "fullSolutions",
 } as const
 
 type ServiceKey = (typeof SERVICE_SLUG_TO_KEY)[keyof typeof SERVICE_SLUG_TO_KEY]
 
 const LEGACY_SLUG_TO_NEW = {
-  "full-stack-web-app-development": "full-stack",
-  "website-optimization-performance": "performance", // ✅ add this
-  "website-optimization-performance-engineering": "performance", // (keep if you want)
-  "ux-ui-design-user-experience": "ux-ui",
-  "geo-llm-search-optimization": "geo-llm",
-  "answer-engine-optimization": "aeo",
-  "paid-advertising-ppc": "ppc",
-  "content-professional-writing": "content",
-  "ecommerce-solutions": "ecommerce",
-  "ai-integrations-automation": "ai-automation",
+  "full-stack": "full-solutions",
+  "full-stack-web-app-development": "full-solutions",
+  performance: "web",
+  "website-optimization-performance": "web",
+  "website-optimization-performance-engineering": "web",
+  "ux-ui": "web",
+  "ux-ui-design-user-experience": "web",
+  seo: "web",
+  "geo-llm": "ai-solutions",
+  "geo-llm-search-optimization": "ai-solutions",
+  aeo: "content-creation",
+  "answer-engine-optimization": "content-creation",
+  ppc: "marketing-growth",
+  "paid-advertising-ppc": "marketing-growth",
+  content: "content-creation",
+  "content-professional-writing": "content-creation",
+  ecommerce: "full-solutions",
+  "ecommerce-solutions": "full-solutions",
+  "ai-automation": "ai-solutions",
+  "ai-integrations-automation": "ai-solutions",
 } as const
 
 function BentoCard({
@@ -328,7 +334,7 @@ export default function ServiceSlug({ locale, t }: Props) {
   const conversionSecondaryAria = t(`${serviceKeyBase}.conversion.ctaSecondaryAria`) as string
 
   // IMPORTANT:
-  // Use router paths and let NavLink + basename handle /TheFramework/.
+  // Use router paths and let NavLink + basename handle /ARARA/.
   const conversionPrimaryTo = lp(contactPath)
   const conversionSecondaryTo = lp(servicesHubPath)
 

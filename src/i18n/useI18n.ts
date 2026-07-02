@@ -42,7 +42,8 @@ export function useI18n() {
 
   const t = (key: string): JsonValue => {
     const val = getValue(dict, key)
-    return val !== undefined ? val : key
+    if (val !== undefined) return val
+    return getValue(en as unknown as JsonObject, key) ?? key
   }
 
   return { t, locale }
