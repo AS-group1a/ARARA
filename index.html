@@ -21,9 +21,8 @@
       content="A full-stack human experience studio connecting AI, security, web, content, and growth so every part of your digital presence works as one system."
     />
     <meta property="og:type" content="website" />
-    <!-- IMPORTANT: no leading slash on project sites -->
     <meta property="og:image" content="og.png" />
-    <meta property="og:url" content="https://as-group1a.github.io/ARARA/" />
+    <meta property="og:url" content="https://www.ararahx.com/" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@arara" />
@@ -32,11 +31,9 @@
       name="twitter:description"
       content="A full-stack human experience studio connecting AI, security, web, content, and growth so every part of your digital presence works as one system."
     />
-    <!-- IMPORTANT: no leading slash on project sites -->
     <meta name="twitter:image" content="og.png" />
 
-    <!-- Canonical for the GitHub Pages deployment -->
-    <link rel="canonical" href="https://as-group1a.github.io/ARARA/" />
+    <link rel="canonical" href="https://www.ararahx.com/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,13 +42,12 @@
       rel="stylesheet"
     />
 
-    <!-- GitHub Pages SPA fallback: decode ?p=... and restore route under Vite BASE_URL -->
-    <script type="module">
+    <!-- GitHub Pages SPA fallback: decode ?p=... and restore route -->
+    <script>
       (function () {
         const l = window.location
 
-        // Works in DEV ("/") and BUILD ("/ARARA/")
-        const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/")
+        const base = "/"
 
         const params = new URLSearchParams(l.search)
         const p = params.get("p")

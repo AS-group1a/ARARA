@@ -8,17 +8,11 @@
       (function () {
         var l = window.location;
 
-        // GitHub Pages repo base (project site)
-        var base = "/ARARA/";
+        // GitHub Pages custom-domain base
+        var base = "/";
 
         // Prevent loops if we already redirected
         if (l.search && l.search.indexOf("?p=") === 0) return;
-
-        // Normalize if GitHub serves "/ARARA" without trailing slash
-        if (l.pathname === "/ARARA") {
-          l.replace(base);
-          return;
-        }
 
         // Build the full intended client-side route
         var full = l.pathname + l.search + l.hash;
