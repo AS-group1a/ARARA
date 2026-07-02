@@ -6,13 +6,11 @@ import { componentTagger } from "lovable-tagger"
 
 export default defineConfig(({ command, mode }) => ({
   /**
-   * GitHub Pages Project Site Base
+   * GitHub Pages custom-domain base
    * DEV  → "/"
-   * BUILD → "/ARARA/"
-   *
-   * This MUST be hardcoded for GitHub Pages project deployments.
+   * BUILD → "/" for www.ararahx.com
    */
-  base: command === "build" ? "/ARARA/" : "/",
+  base: command === "build" ? "/" : "/",
 
   server: {
     host: "::",

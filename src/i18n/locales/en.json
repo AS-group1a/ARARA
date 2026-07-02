@@ -288,7 +288,7 @@
     },
     "schema": {
       "orgName": "ARARA",
-      "url": "https://as-group1a.github.io/ARARA",
+      "url": "https://www.ararahx.com",
       "areaServed": "Lebanon",
       "contactType": "customer support",
       "availableLanguage": "en, fr, ar"
@@ -758,11 +758,11 @@
     }
   },
   "seo": {
-    "siteUrl": "https://as-group1a.github.io/ARARA",
+    "siteUrl": "https://www.ararahx.com",
     "organization": {
       "name": "ARARA",
-      "url": "https://as-group1a.github.io/ARARA",
-      "logo": "https://as-group1a.github.io/ARARA/logo.png",
+      "url": "https://www.ararahx.com",
+      "logo": "https://www.ararahx.com/logo.png",
       "siteName": "ARARA",
       "defaults": {
         "title": "ARARA | AI, Cybersecurity, Web, Content & Growth Studio",
